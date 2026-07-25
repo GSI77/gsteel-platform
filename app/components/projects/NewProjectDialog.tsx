@@ -20,7 +20,7 @@ export default function NewProjectDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger>
         <Button className="bg-orange-500 hover:bg-orange-600">
           + New Project
         </Button>
@@ -32,7 +32,6 @@ export default function NewProjectDialog() {
         </DialogHeader>
 
         <div className="space-y-5">
-
           <div>
             <Label htmlFor="projectName">Project Name</Label>
 
@@ -52,9 +51,7 @@ export default function NewProjectDialog() {
           </div>
 
           <div>
-            <Label htmlFor="description">
-              Description
-            </Label>
+            <Label htmlFor="description">Description</Label>
 
             <Textarea
               id="description"
@@ -63,20 +60,18 @@ export default function NewProjectDialog() {
           </div>
 
           <div className="flex justify-end gap-3 pt-2">
-
             <Button
               variant="outline"
+              type="button"
               onClick={() => setOpen(false)}
             >
               Cancel
             </Button>
 
-            <Button className="bg-orange-500 hover:bg-orange-600">
+            <Button type="button" className="bg-orange-500 hover:bg-orange-600">
               Create Project
             </Button>
-
           </div>
-
         </div>
       </DialogContent>
     </Dialog>
